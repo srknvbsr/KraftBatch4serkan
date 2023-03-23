@@ -1,0 +1,6 @@
+operators
+1.aritmeric operators(+,- * / % )>>>>>done
+2. Unary operator (+,-,++--)
+3. shorthand Operator (= += -= *= /= %=
+4. Relatıon Operator(
+
