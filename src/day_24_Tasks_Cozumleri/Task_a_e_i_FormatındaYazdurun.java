@@ -15,14 +15,24 @@ public class Task_a_e_i_FormatındaYazdurun {
         str3 = message.substring(6, 7);
         System.out.println(str1 + "," + str2 + "," + str3);
         */
-        sesliHarfBul("Merhaba");
-
-
+        System.out.println(sesliHarfBul("Merhaba"));
 
 
     }
-    public static String sesliHarfBul(String str){
-        return str;
+
+    public static String sesliHarfBul(String str) {
+        String message="";
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'a' || str.charAt(i) == 'e' ||str.charAt(i) == 'ı' ||str.charAt(i) == i
+                    || str.charAt(i) == 'o' || str.charAt(i) == 'ö' || str.charAt(i) == 'u' || str.charAt(i) == 'ü') {
+               message+=str.charAt(i);
+            }
+
+        }
+        return message;
+
+
+
     }
 
 }

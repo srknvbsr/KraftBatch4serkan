@@ -1,0 +1,102 @@
+package day_27_String_Lab_Cont;
+
+public class Soru {
+    //1-)Kullanıcının girdiği sayısal bir ifadeyi alan ve 1den başlayarak girilen sayı
+    //dahil toplamını veren metodu yazınız.
+    public static void main(String[] args) {
+        System.out.println("---------------------------------------------------------------1");
+        System.out.println(toplamVeren(5, 1));
+        System.out.println("---------------------------------------------------------------2");
+        System.out.println(vucutKitleEndeksiHesapla(86, 186));
+        System.out.println("---------------------------------------------------------------3");
+        System.out.println(kacAdetVar("Merhaba", 'a'));
+        System.out.println("---------------------------------------------------------------4");
+        System.out.println(faktoriyel(5));
+        System.out.println("---------------------------------------------------------------5");
+        System.out.println(polindrom("kelek"));
+
+
+    }
+
+    public static int toplamVeren(int number, int baslangıc) {
+        int toplam = 0;
+
+        for (int i = baslangıc; i <= number; i++) {
+            toplam += i;
+
+
+        }
+        return toplam;
+    }
+
+    //Soru 2- Kullanicinin kilo(kg) ve boyunu(cm) isteyip
+    //Aldiginiz degerleri bir metoda gondererek hesaplatin
+    //vucutKitleEndeksiHesapla(kilo,boy)
+    // vucut kitle endeksi = (kilo*10000 / (boy *boy))
+    // vucut kitle endeksi
+    // 30’dan buyukse obez,
+    // 25-30 arasi ise kilolu,
+    // 20-25 arasi ise normal,
+    // 20’den kucukse zayif yazdirin.
+    public static String vucutKitleEndeksiHesapla(int kilo, int boy) {
+
+        String str = "obez";
+        String str1 = "kilolu";
+        String str2 = "normal";
+        String str3 = "zayif";
+        double vucutKitleEndeksi = (kilo * 1000 / (boy * boy));
+        if (vucutKitleEndeksi > 30) {
+            return str;
+        } else if (vucutKitleEndeksi > 25 & vucutKitleEndeksi < 30) {
+            return str1;
+
+        } else if (vucutKitleEndeksi > 20 & vucutKitleEndeksi < 25) {
+            return str2;
+
+        } else {
+            return str3;
+        }
+
+
+    }
+
+    //K 3-) Kullanicidan bir String bir de char deger alin. Stringin icinde kac tane char
+    //oldugunu donen bir metodla sayiyi hesaplatin. Stringde kac adet o harften
+    //oldugunu da asagidaki formatta ekrana yazdirin. İpucu: length(),
+    //frequency(String str,char ch)
+    //orn:input “Merhaba”, ‘a’ Output= Merhaba ‘da 2 adet a bulunmaktadir
+    public static int kacAdetVar(String str, char a) {
+        int adet = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'a')
+                adet++;
+        }
+        return adet;
+    }
+
+    //Girilen sayının faktoriyelini döndüren bir metot yazınız.
+    public static int faktoriyel(int number) {
+        int faktoriyel = 1;
+        for (int i = 1; i <= number; i++) {
+            faktoriyel = faktoriyel * i;
+
+        }
+        return faktoriyel;
+    }
+
+    //Girilen kelimenin polindrom olup olmadığını kontrol eden bir metot yazınız.
+    //(Tersi kendisine eşit).
+    public static String polindrom(String str) {
+        String reverse = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reverse = reverse.concat(str.substring(i, i + 1));
+
+        }
+        return reverse;
+
+    }
+    //Concat işlemi yapan 2 adet ve 3 adet değer alacak iki farklı overloading metot
+    //yazınız.
+    //equalsIgnorecase() metodunu kullanmadan girilen 2 string türündeki değeri
+    //büyükküçük harfleri baz almadan kontrol eden bir metot yazınız.
+}

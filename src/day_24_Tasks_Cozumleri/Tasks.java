@@ -10,7 +10,7 @@ public class Tasks {
         //sayısı eşit mesajı döndürsün eğer aynı stringler gönderildiyse, bu
         //kelimeler aynı mesajı döndürsün Kelimeler her anlamda farklı
         //ise kullanıcıyı aynı sürece sokun .
-        Scanner scan = new Scanner(System.in);
+        /*Scanner scan = new Scanner(System.in);
         booler:
         while (true) {
             System.out.println("Lütfen iki kelime giriniz: ");
@@ -28,8 +28,38 @@ public class Tasks {
             } else {
                 System.out.println("Tebrikler kelimler farklı");
                 continue booler;
-
-            }
+                */
+        Scanner scan = new Scanner(System.in);
+        boolean flag = true;
+        while (flag) {
+            System.out.print("1.kelime: ");
+            String str5 = scan.nextLine();
+            System.out.print("2.kelime: ");
+            String str6 = scan.nextLine();
+            flag = !soru5(str5, str6);
         }
     }
+    public static boolean soru5(String a, String b) {
+        if (a.equalsIgnoreCase(b)) {
+            System.out.println("kelimeler aynı");
+            return true;
+        }
+        if (a.length() == b.length()) {
+            System.out.println("girdiğiniz kelimelerin karekter sayısı eşit");
+            return true;
+        }
+        System.out.println("kelimeler aynı değil ve  uzunlukları aynı değil");
+        return false;
+
+    }
+
+
+
 }
+
+
+
+
+
+
+
