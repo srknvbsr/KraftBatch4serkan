@@ -1,0 +1,31 @@
+Collections
+
+    Data Structures
+        Array
+        Collection
+        Map
+
+    Array:          size is fixed//Size sabit
+                    supports both primitive and non-primitive datatypes//
+                    supports only one homogeneous elements (one type) in an array//Tek tip veri tutar
+
+    Collection:     Size is dynamic//Sabit değil
+                    supports only non-primitives//Sadece non primitiveleri destekler.
+                    supports different types of objects//Farklı tipte objeleri destekler.
+                    Collection is an interface
+
+                    List (I)):    Accepts duplicates,(Yinelenen ifadeleri kabul eder)
+                    preserve put order(Ekleme sırasoını muhafaza eder), has index numbers
+
+                        ArrayList :  internally uses Array,dynamic Array
+                                     Accessing the data is fast (get())//Get özelliğinden dolayı hızlı
+
+                        LinkedList:  uses doubly linked list (previous nodes reference, data, next nodes reference)
+                                     adding/removing is sfaster (add(),remove())//ekleme ve çıkarma jızlı
+                                     requires more memory size//Çok kapasite kaplar.
+
+                        Vector:      internally uses array
+                                     Thread Safe- Synchronised
+
+                        Stack:       LIFO (Last in First Out)
+

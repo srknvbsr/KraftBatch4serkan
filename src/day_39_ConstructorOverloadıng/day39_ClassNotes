@@ -1,0 +1,34 @@
+Consructor Overloadıng;
+    Rewiev:
+    Consructor : A special Methods.//özel metot.
+
+
+Class Car(){
+
+String model;
+
+}
+Syntax: Access - Modifier Classname(String model){//Javanın kafası karışmaması iin this kullanırız.
+                                                    String yanına K vs yazarsak thise gerek yok
+this.model=model;
+
+
+}
+Syntax: Access - Modifier Classname(String k){//String yanına K vs yazarsak thise gerek yok
+
+model=k;
+
+}
+use for creating objects//Obje oluşturmak
+instaniate the instance variable//İlk değerler verilir.
+
+this. : to call instance variables, or instance method//İnstance değişkenleri ve metotu çağırırız.
+
+this() : used for calling constructor// o nesnenin constructor çağırırız.
+
+Consructor call:
+1. Consructors cannot be called by its name(this() methodu ile çağrılabilirler.)
+2. Only a consructor can call another consructor
+3. Consructor must be called first, should be on the first step
+4. One consructor cannot call more than one consructors
+5. Consrucctor cannot call it self
