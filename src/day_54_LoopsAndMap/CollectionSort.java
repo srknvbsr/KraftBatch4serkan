@@ -5,30 +5,38 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static day_17_Methods.C04_Methods_02.max;
+
 public class CollectionSort {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(12, 43, 2, 4, 5, 1, 99, 67);
         List<String> list2 = Arrays.asList("Harun", "Ahmet");
-        // System.out.println(list2.get(0));
-        // Collections.sort(list2);
 
-        // Collections.sort(list);
+        List<Integer> yenilist = Arrays.asList(12, 43, 2, 4, 5, 1, 99, 67);
+       /* System.out.println(yenilist);
+        System.out.println(yenilist.get(0));
+        Collections.sort(yenilist);
+        System.out.println(yenilist);
+        System.out.println(yenilist.get(0));
 
-        System.out.println(list.get(0));
-        System.out.println(max(list));
-        System.out.println(list.get(0));
+        */
+        System.out.println(list);
+        System.out.println(Collections.max(list));
+        System.out.println(list);
+        Collections.reverse(list);
+
 
     }
 
     public static int max(List<Integer> list) {
-        List<Integer>copyList=new ArrayList<>();
+        List<Integer> copyList=new ArrayList<>(list.size());
 
+      copyList.addAll(list);
+      Collections.sort(copyList);
 
-        copyList.addAll(list);
-        Collections.copy(copyList,list);
-        Collections.sort(copyList);
-        return copyList.get(list.size()-1);
+return copyList.size();
+
     }
-
-
 }
+
+
